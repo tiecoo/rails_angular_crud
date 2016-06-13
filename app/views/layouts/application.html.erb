@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myapplication">
+<head>
+  <title>Agenda</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="well">
+   <h3>Criado por: Diego Pereira e Victor Henrique Mazali</h3>
+</div>
+  <div class="container" ng-view>
+    <%= yield %>
+  </div>
+
+</body>
+</html>

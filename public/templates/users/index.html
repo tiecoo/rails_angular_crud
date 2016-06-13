@@ -1,0 +1,28 @@
+<br/>
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-primary" href="#/users/new">Criar contato</a>
+        <h3 class="block">Users</h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th></th>
+            </tr>
+            <tr ng-hide="users.length" >
+                <td colspan="5">Nenhum usuario criado, crie um.</td>
+            </tr>
+            <tr ng-show="users.length" ng-repeat="user in users">
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+                <td>
+                    <a href="#/users/{{user.id}}/edit">Modificar</a> | <a href="" ng-click="deleteUser(user.id)">Remover</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
